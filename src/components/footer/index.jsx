@@ -8,22 +8,41 @@ import { Link } from "react-router-dom";
 const Footer = (props) => {
   const { previousLink, nextLink } = props;
   return (
-    <AppBar position={"static"}>
+    <AppBar
+      classes={{
+        root: style.ContainerWrapper,
+      }}
+      position={"static"}
+    >
       <div className={style.Container}>
         {previousLink ? (
-          <Link to={previousLink}>
-            <Button variant="contained" color="secondary">
+          <Link className={"ResetButton"} to={previousLink}>
+            <Button
+              className={"GeneralButton Button--NoMargin"}
+              variant="contained"
+              color="secondary"
+            >
               Previous
             </Button>
           </Link>
         ) : (
-          <Button disabled variant="contained" color="secondary">
+          <Button
+            className={"GeneralButton Button--NoMargin"}
+            disabled
+            variant="contained"
+            color="secondary"
+          >
             Previous
           </Button>
         )}
 
-        <Link to={nextLink}>
-          <Button disabled={!nextLink} variant="contained" color="secondary">
+        <Link className={"ResetButton"} to={nextLink}>
+          <Button
+            className={"GeneralButton Button--NoMargin"}
+            disabled={!nextLink}
+            variant="contained"
+            color="secondary"
+          >
             Next
           </Button>
         </Link>

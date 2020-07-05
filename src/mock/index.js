@@ -112,8 +112,6 @@ const data = [
 ];
 
 export const getBooksApi = (getError, loadTime) => {
-  console.log("here");
-
   const timeout = loadTime ? loadTime : 1300;
   return new Promise((resolve, reject) => {
     setTimeout(() => {

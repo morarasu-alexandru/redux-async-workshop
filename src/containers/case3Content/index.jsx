@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { getBookList, resetBookList } from "../../actions/case3/case3";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
+import Button from "@material-ui/core/Button";
+import PaperSocket from "../../components/caseTemplate";
+
 const Case3Content = () => {
   const { list, errorMessage, isLoading } = useSelector((state) => state.case3);
   const dispatch = useDispatch();
@@ -11,11 +14,29 @@ const Case3Content = () => {
   const resetBookListAction = () => dispatch(resetBookList());
 
   return (
-    <>
-      <div>
-        <button onClick={getBookListAction}>Make api call</button>
-        <button onClick={resetBookListAction}>reset</button>
-        <p>{errorMessage}</p>
+    <PaperSocket>
+      <div className="BoxButtons">
+        <Button
+          className={"GeneralButton"}
+          onClick={getBookListAction}
+          size={"small"}
+          variant={"contained"}
+          color={"primary"}
+        >
+          Make api call
+        </Button>
+        <Button
+          className={"GeneralButton"}
+          onClick={resetBookListAction}
+          size={"small"}
+          variant={"contained"}
+          color={"primary"}
+        >
+          reset
+        </Button>
+      </div>
+      {errorMessage !== "" && <p className="ErrorMessage">{errorMessage}</p>}
+      <div className="ResultContent">
         {isLoading ? (
           <CircularProgress />
         ) : (
@@ -26,7 +47,7 @@ const Case3Content = () => {
           </ul>
         )}
       </div>
-    </>
+    </PaperSocket>
   );
 };
 

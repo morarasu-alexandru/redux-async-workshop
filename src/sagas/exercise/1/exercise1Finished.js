@@ -1,15 +1,6 @@
-import {
-  call,
-  put,
-  takeEvery,
-  cancelled,
-  take,
-  fork,
-  cancel,
-} from "redux-saga/effects";
+import { call, cancel, fork, put, take } from "redux-saga/effects";
 
 import {
-  cancelGetBookList,
   getBookListFulfilled,
   getBookListRejected,
 } from "../../../actions/exercise/1/exercise1Finished";
@@ -21,11 +12,11 @@ function* fetchBookListSaga() {
     const bookList = yield call(getBooksApi);
     yield put(getBookListFulfilled(bookList));
   } catch (err) {
-    yield put(getBookListRejected({ err }));
+    yield put(getBookListRejected(err));
   }
 }
 
-export function* watchCancelableGetBookList() {
+export function* watchCancelableGetBookListFinished() {
   while (yield take(simpleSagaExerciseFinishedActions.getBookList)) {
     const fetchBookListSagaTask = yield fork(fetchBookListSaga);
 

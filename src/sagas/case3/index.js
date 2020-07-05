@@ -12,7 +12,7 @@ function* fetchBookListSaga() {
     const bookList = yield call(getBooksApi);
     yield put(getBookListFulfilled(bookList));
   } catch (err) {
-    yield put(getBookListRejected({ err }));
+    yield put(getBookListRejected(err));
   }
 }
 

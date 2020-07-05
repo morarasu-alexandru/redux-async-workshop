@@ -9,7 +9,7 @@
 }
 
 .wrapperExercise {
-    padding: 1em;
+    padding: 1.5em 1em;
     box-sizing: border-box;
 }
 
@@ -21,8 +21,6 @@
 }
 
 .exercise {
-    border: 2px solid #3f51b536;
-    border-radius: 4px;
     display: inline-flex;
     box-sizing: border-box;
     width: 100%;
@@ -42,4 +40,43 @@
     .exerciseRight {
         margin-left: 1%;
     }
+}
+
+.ResetButton.ResetButton {
+    text-decoration: none;
+}
+
+.BoxButtons.BoxButtons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.GeneralButton.GeneralButton {
+    /*margin: 0 10px;*/
+    min-width: 122px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    margin: .8em .2em;
+}
+
+.Button--NoMargin.Button--NoMargin {
+    margin: 0
+}
+
+.ResultContent.ResultContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ErrorMessage {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ec0d0d;
 }

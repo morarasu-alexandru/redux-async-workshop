@@ -1,14 +1,19 @@
 import React from "react";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { useDispatch, useSelector } from "react-redux";
+import Button from "@material-ui/core/Button";
+
 import {
   cancelGetBookList,
   getBookList,
   resetBookList,
 } from "../../../actions/exercise/1/exercise1Finished";
+import PaperSocket from "../../../components/caseTemplate";
 
 const Exercise1Finished = () => {
-  const { isLoading, list } = useSelector((state) => state.exercise1Finished);
+  const { isLoading, list, errorMessage } = useSelector(
+    (state) => state.exercise1Finished
+  );
 
   const dispatch = useDispatch();
 
@@ -17,10 +22,32 @@ const Exercise1Finished = () => {
   const cancelGetBookListAction = () => dispatch(cancelGetBookList());
 
   return (
-    <div>
-      <button onClick={getBookListAction}>Make api call</button>
-      <button onClick={cancelGetBookListAction}>cancel</button>
-      <button onClick={resetBookListAction}>reset</button>
+    <PaperSocket fullSize>
+      <Button
+        onClick={getBookListAction}
+        size={"small"}
+        variant={"contained"}
+        color={"primary"}
+      >
+        Make api call
+      </Button>
+      <Button
+        onClick={cancelGetBookListAction}
+        size={"small"}
+        variant={"contained"}
+        color={"primary"}
+      >
+        cancel
+      </Button>
+      <Button
+        onClick={resetBookListAction}
+        size={"small"}
+        variant={"contained"}
+        color={"primary"}
+      >
+        reset
+      </Button>
+      <p>{errorMessage}</p>
       <div>
         {isLoading ? (
           <CircularProgress />
@@ -32,7 +59,7 @@ const Exercise1Finished = () => {
           </ul>
         )}
       </div>
-    </div>
+    </PaperSocket>
   );
 };
 

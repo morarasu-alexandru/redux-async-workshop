@@ -1,8 +1,13 @@
 .Content {
   height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 4.4em;
 }
 
 .Content .Button {
   margin: 20px 0;
   padding: 10px 70px;
+  min-width: 236px;
+  font-weight: bold;
+  font-size: 18px;
 }

@@ -8,7 +8,7 @@ import HomeContent from "../../components/homeContent";
 const HomePage = () => {
   return (
     <>
-      <Header title="Home page" />
+      <Header title="Homepage" />
       <Content className={"TextCenter"}>
         <HomeContent />
       </Content>
