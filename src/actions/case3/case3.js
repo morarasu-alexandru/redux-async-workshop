@@ -1,4 +1,4 @@
-import { simpleSagaActions, thunkReduxActions } from "../../actionTypes";
+import { simpleSagaActions } from "../../actionTypes";
 
 export const getBookList = () => ({
   type: simpleSagaActions.getBookList,

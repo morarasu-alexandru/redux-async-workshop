@@ -1,6 +1,6 @@
 import React from "react";
-import ExerciseTemplate from "../../components/exerciseTemplate";
-import Exercise1Finished from "./exercise";
+import ExerciseTemplate from "../exerciseTemplate";
+import Exercise1Finished from "../../containers/exerciseFinished/1";
 
 const Exercise1Content = () => {
   return (

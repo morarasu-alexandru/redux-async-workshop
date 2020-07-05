@@ -4,7 +4,7 @@ const pageRoute = {
   case2: "/case2",
   case3: "/case3",
   case4: "/case4",
-  exercise1: "/exercise1",
+  exercise1: "/exercise",
   exercise2: "/exercise2",
 };
 

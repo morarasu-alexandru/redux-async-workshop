@@ -4,7 +4,8 @@ import thunk from "redux-thunk";
 import createSagaMiddleware from "redux-saga";
 
 import rootReducer from "../reducers";
-import { getBookListSaga } from "../sagas/case3";
+import { watchGetBookList } from "../sagas/case3";
+import { watchCancelableGetBookList } from "../sagas/exercise/1/exercise1Finished";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -12,6 +13,8 @@ const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk, sagaMiddleware))
 );
-sagaMiddleware.run(getBookListSaga);
+
+sagaMiddleware.run(watchGetBookList);
+sagaMiddleware.run(watchCancelableGetBookList);
 
 export default store;

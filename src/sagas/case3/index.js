@@ -7,7 +7,7 @@ import {
 import { simpleSagaActions } from "../../actionTypes";
 import { getBooksApi } from "../../mock";
 
-function* fetchBookList() {
+function* fetchBookListSaga() {
   try {
     const bookList = yield call(getBooksApi);
     yield put(getBookListFulfilled(bookList));
@@ -16,6 +16,6 @@ function* fetchBookList() {
   }
 }
 
-export function* getBookListSaga() {
-  yield takeLatest(simpleSagaActions.getBookList, fetchBookList);
+export function* watchGetBookList() {
+  yield takeLatest(simpleSagaActions.getBookList, fetchBookListSaga);
 }

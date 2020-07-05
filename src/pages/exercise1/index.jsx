@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/header";
 import Content from "../../components/content";
-import Exercise1Content from "../../containers/exercise1Content";
+import Exercise1Content from "../../components/exercise1Content";
 import Footer from "../../components/footer";
 import pageRoute from "../pageRoute";
 
