@@ -35,3 +35,15 @@ export const simpleSagaExerciseFinishedActions = {
     "SIMPLE-SAGA-EXERCISE--GET-BOOK-LIST-FULFILLED--FINISHED",
   cancelGetBookList: "SIMPLE-SAGA-EXERCISE--CANCEL-GET-BOOK--FINISHED",
 };
+
+export const counterSagaActions = {
+  increment: "COUNTER-SAGA--INCREMENT",
+  incrementAsync: "COUNTER-SAGA--INCREMENT-ASYNC",
+  reset: "COUNTER-SAGA--RESET",
+};
+
+export const counterSagaFinishedActions = {
+  increment: "COUNTER-SAGA--INCREMENT-FINISHED",
+  incrementAsync: "COUNTER-SAGA--INCREMENT-ASYNC-FINISHED",
+  reset: "COUNTER-SAGA--RESET-FINISHED",
+};

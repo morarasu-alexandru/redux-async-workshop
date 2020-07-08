@@ -1,72 +1,54 @@
 import React from "react";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import { useDispatch, useSelector } from "react-redux";
-import Button from "@material-ui/core/Button";
-
-import {
-  cancelGetBookList,
-  getBookList,
-  resetBookList,
-} from "../../../actions/exercise/1/exercise1";
 import PaperSocket from "../../../components/caseTemplate";
+import Button from "@material-ui/core/Button";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  incrementCounter,
+  incrementCounterAsync,
+  resetCounter,
+} from "../../../actions/exercise/1/exercise1";
 
 const Exercise1 = () => {
-  const { isLoading, list, errorMessage } = useSelector(
-    (state) => state.exercise1
-  );
+  const { count } = useSelector((state) => state.exercise1);
 
   const dispatch = useDispatch();
 
-  const getBookListAction = () => dispatch(getBookList());
-  const resetBookListAction = () => dispatch(resetBookList());
-  const cancelGetBookListAction = () => dispatch(cancelGetBookList());
-  // todo: add cancel function to corresponding button
+  const incrementCounterAction = () => dispatch(incrementCounter());
+  const incrementCounterAsyncAction = () => dispatch(incrementCounterAsync());
+  const resetCounterAction = () => dispatch(resetCounter());
 
   return (
     <PaperSocket fullSize>
       <div className="BoxButtons">
         <Button
-          onClick={getBookListAction}
+          onClick={incrementCounterAction}
           className="GeneralButton"
           variant={"contained"}
           color={"primary"}
           size={"small"}
         >
-          Make api call
+          ++
         </Button>
         <Button
-          onClick={() => {
-            console.log("function has to be replaced with cancel action");
-          }}
+          onClick={incrementCounterAsyncAction}
           className="GeneralButton"
-          size={"small"}
           variant={"contained"}
           color={"primary"}
+          size={"small"}
         >
-          cancel
+          Async ++
         </Button>
         <Button
-          onClick={resetBookListAction}
+          onClick={resetCounterAction}
           className="GeneralButton"
-          size={"small"}
           variant={"contained"}
           color={"primary"}
+          size={"small"}
         >
-          reset
+          Reset
         </Button>
       </div>
-      <p>{errorMessage}</p>
-      <div>
-        {isLoading ? (
-          <CircularProgress />
-        ) : (
-          <ul>
-            {list.map((elem, idx) => (
-              <li key={idx}>{elem.title}</li>
-            ))}
-          </ul>
-        )}
-      </div>
+      <div>{count}</div>
     </PaperSocket>
   );
 };

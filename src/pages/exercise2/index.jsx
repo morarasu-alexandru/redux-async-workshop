@@ -1,25 +1,28 @@
 import React from "react";
 import Header from "../../components/header";
 import Content from "../../components/content";
+import Exercise2Content from "../../components/exercise2Content";
 import Footer from "../../components/footer";
 import pageRoute from "../pageRoute";
-import Exercise1Content from "../../components/exercise1Content";
 import Info from "../../components/info";
 import infoImg from "../../components/img/1/info1.png";
 
-const Exercise1Page = () => {
+const Exercise2Page = () => {
   const content = <img src={infoImg} alt={"saga info"} />;
 
   return (
     <>
-      <Header title="Exercise 1: Asynchronous counter" />
+      <Header title="Exercise 2: Cancelable Server call redux-saga" />
       <Info title={"Task cancellation"} content={content} />
       <Content>
-        <Exercise1Content />
+        <Exercise2Content />
       </Content>
-      <Footer previousLink={pageRoute.case3} nextLink={pageRoute.exercise2} />
+      <Footer
+        previousLink={pageRoute.exercise1}
+        nextLink={pageRoute.exercise3}
+      />
     </>
   );
 };
 
-export default Exercise1Page;
+export default Exercise2Page;

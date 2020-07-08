@@ -3,7 +3,7 @@ import { call, cancel, fork, put, take } from "redux-saga/effects";
 import {
   getBookListFulfilled,
   getBookListRejected,
-} from "../../../actions/exercise/1/exercise1Finished";
+} from "../../../actions/exercise/2/exercise2Finished";
 import { simpleSagaExerciseFinishedActions } from "../../../actionTypes";
 import { getBooksApi } from "../../../mock";
 

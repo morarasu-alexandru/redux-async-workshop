@@ -1,25 +1,13 @@
-import { simpleSagaExerciseFinishedActions } from "../../../actionTypes";
+import { counterSagaFinishedActions } from "../../../actionTypes";
 
-export const getBookList = () => ({
-  type: simpleSagaExerciseFinishedActions.getBookList,
+export const incrementCounter = () => ({
+  type: counterSagaFinishedActions.increment,
 });
 
-export const getBookListRejected = (err) => ({
-  type: simpleSagaExerciseFinishedActions.getBookListRejected,
-  payload: { err },
+export const incrementCounterAsync = () => ({
+  type: counterSagaFinishedActions.incrementAsync,
 });
 
-export const getBookListFulfilled = (newList) => {
-  return {
-    type: simpleSagaExerciseFinishedActions.getBookListFulfilled,
-    payload: { newList },
-  };
-};
-
-export const resetBookList = () => ({
-  type: simpleSagaExerciseFinishedActions.resetBookList,
-});
-
-export const cancelGetBookList = () => ({
-  type: simpleSagaExerciseFinishedActions.cancelGetBookList,
+export const resetCounter = () => ({
+  type: counterSagaFinishedActions.reset,
 });

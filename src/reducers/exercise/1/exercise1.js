@@ -1,49 +1,20 @@
-import { simpleSagaExerciseActions } from "../../../actionTypes";
+import { counterSagaActions } from "../../../actionTypes";
 
 const initialState = {
-  isLoading: false,
-  errorMessage: "",
-  list: [],
+  count: 1,
 };
 
 const exercise1Reducer = (state = initialState, action) => {
   switch (action.type) {
-    case simpleSagaExerciseActions.getBookList:
+    case counterSagaActions.increment:
       return {
-        ...state,
-        isLoading: true,
+        count: state.count + 1,
       };
 
-    case simpleSagaExerciseActions.getBookListRejected:
-      const { err } = action.payload;
-
-      return {
-        ...state,
-        isLoading: false,
-        errorMessage: err,
-      };
-
-    case simpleSagaExerciseActions.getBookListFulfilled:
-      const { newList } = action.payload;
-
-      return {
-        ...state,
-        isLoading: false,
-        list: newList,
-      };
-
-    case simpleSagaExerciseActions.resetBookList:
+    case counterSagaActions.reset:
       return {
         ...initialState,
       };
-
-    case simpleSagaExerciseActions.cancelGetBookList:
-      return {
-        ...state,
-        isLoading: false,
-        errorMessage: "",
-      };
-
     default:
       return state;
   }

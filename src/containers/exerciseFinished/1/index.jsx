@@ -1,64 +1,54 @@
 import React from "react";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import { useDispatch, useSelector } from "react-redux";
-import Button from "@material-ui/core/Button";
-
-import {
-  cancelGetBookList,
-  getBookList,
-  resetBookList,
-} from "../../../actions/exercise/1/exercise1Finished";
 import PaperSocket from "../../../components/caseTemplate";
+import Button from "@material-ui/core/Button";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  incrementCounter,
+  incrementCounterAsync,
+  resetCounter,
+} from "../../../actions/exercise/1/exercise1Finished";
 
 const Exercise1Finished = () => {
-  const { isLoading, list, errorMessage } = useSelector(
-    (state) => state.exercise1Finished
-  );
+  const { count } = useSelector((state) => state.exercise1Finished);
 
   const dispatch = useDispatch();
 
-  const getBookListAction = () => dispatch(getBookList());
-  const resetBookListAction = () => dispatch(resetBookList());
-  const cancelGetBookListAction = () => dispatch(cancelGetBookList());
+  const incrementCounterAction = () => dispatch(incrementCounter());
+  const incrementCounterAsyncAction = () => dispatch(incrementCounterAsync());
+  const resetCounterAction = () => dispatch(resetCounter());
 
   return (
     <PaperSocket fullSize>
-      <Button
-        onClick={getBookListAction}
-        size={"small"}
-        variant={"contained"}
-        color={"primary"}
-      >
-        Make api call
-      </Button>
-      <Button
-        onClick={cancelGetBookListAction}
-        size={"small"}
-        variant={"contained"}
-        color={"primary"}
-      >
-        cancel
-      </Button>
-      <Button
-        onClick={resetBookListAction}
-        size={"small"}
-        variant={"contained"}
-        color={"primary"}
-      >
-        reset
-      </Button>
-      <p>{errorMessage}</p>
-      <div>
-        {isLoading ? (
-          <CircularProgress />
-        ) : (
-          <ul>
-            {list.map((elem, idx) => (
-              <li key={idx}>{elem.title}</li>
-            ))}
-          </ul>
-        )}
+      <div className="BoxButtons">
+        <Button
+          onClick={incrementCounterAction}
+          className="GeneralButton"
+          variant={"contained"}
+          color={"primary"}
+          size={"small"}
+        >
+          ++
+        </Button>
+        <Button
+          onClick={incrementCounterAsyncAction}
+          className="GeneralButton"
+          variant={"contained"}
+          color={"primary"}
+          size={"small"}
+        >
+          Async ++
+        </Button>
+        <Button
+          onClick={resetCounterAction}
+          className="GeneralButton"
+          variant={"contained"}
+          color={"primary"}
+          size={"small"}
+        >
+          Reset
+        </Button>
       </div>
+      <div>{count}</div>
     </PaperSocket>
   );
 };

@@ -1,20 +1,13 @@
-import { call, put, takeLatest } from "redux-saga/effects";
-import { getBooksApi } from "../../../mock";
-import {
-  getBookListFulfilled,
-  getBookListRejected,
-} from "../../../actions/exercise/1/exercise1";
-import { simpleSagaExerciseActions } from "../../../actionTypes";
+import { put, takeLatest, delay } from "redux-saga/effects";
+import { incrementCounter } from "../../../actions/exercise/1/exercise1";
+import { counterSagaActions } from "../../../actionTypes";
 
-function* fetchBookListSaga() {
-  try {
-    const bookList = yield call(getBooksApi);
-    yield put(getBookListFulfilled(bookList));
-  } catch (err) {
-    yield put(getBookListRejected({ err }));
-  }
+//add delay to saga function accordingly
+function* asyncIncrementSaga() {
+  yield put(incrementCounter());
 }
 
-export function* watchCancelableGetBookList() {
-  yield takeLatest(simpleSagaExerciseActions.getBookList, fetchBookListSaga);
+// make the watcher function listen to all actions of type 'incrementAsync'
+export function* watchAsyncIncrement() {
+  yield takeLatest(counterSagaActions.incrementAsync, asyncIncrementSaga);
 }

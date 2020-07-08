@@ -6,6 +6,7 @@ const pageRoute = {
   case4: "/case4",
   exercise1: "/exercise1",
   exercise2: "/exercise2",
+  exercise3: "/exercise3",
 };
 
 export default pageRoute;
