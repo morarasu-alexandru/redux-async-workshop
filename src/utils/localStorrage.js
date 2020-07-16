@@ -3,7 +3,9 @@ export const saveSize = (size) => {
 };
 
 export const getSize = () => {
-  return localStorage.getItem("size");
+  const size = localStorage.getItem("size");
+  if (size === null) return 50;
+  return size;
 };
 
 export const saveSizeFinished = (size) => {
@@ -11,5 +13,9 @@ export const saveSizeFinished = (size) => {
 };
 
 export const getSizeFinished = () => {
-  return localStorage.getItem("sizeFinished");
+  const size = localStorage.getItem("sizeFinished");
+
+  if (size === null) return 50;
+
+  return size;
 };

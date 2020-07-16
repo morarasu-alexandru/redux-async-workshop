@@ -6,12 +6,12 @@ import {
   postSizeFulfilled,
   postSizeRejected,
   savePaneSize,
-} from "../../../actions/exercise/3/exercise3Finished";
-import { getSizeFinishedApi, saveSizeFinishedApi } from "../../../mock";
+} from "../../../actions/exercise/3/exercise3";
+import { getSizeApi, saveSizeApi } from "../../../mock";
 
 function* postSizeSaga(size) {
   try {
-    yield call(saveSizeFinishedApi, size);
+    yield call(saveSizeApi, size);
     yield put(postSizeFulfilled());
   } catch (err) {
     yield put(postSizeRejected(err));
@@ -20,7 +20,7 @@ function* postSizeSaga(size) {
 
 function* getSizeSaga() {
   try {
-    const size = yield call(getSizeFinishedApi);
+    const size = yield call(getSizeApi);
     yield put(getSizeFulfilled(parseInt(size)));
   } catch (err) {
     yield put(getSizeRejected(err));
@@ -33,7 +33,7 @@ function* paneResizeSaga(action) {
   yield call(postSizeSaga, size);
 }
 
-export function* watchPaneResizeFinished() {
+export function* watchPaneResize() {
   yield debounce(500, debounceFinishedActions.changeSize, paneResizeSaga);
   yield takeLatest(debounceFinishedActions.getSize, getSizeSaga);
 }

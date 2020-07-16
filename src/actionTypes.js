@@ -29,6 +29,7 @@ export const simpleSagaExerciseActions = {
 
 export const simpleSagaExerciseFinishedActions = {
   resetBookList: "SIMPLE-SAGA-EXERCISE--RESET-BOOK-LIST--FINISHED",
+  startGetBookList: "SIMPLE-SAGA-EXERCISE--START-GET-BOOK-LIST--FINISHED",
   getBookList: "SIMPLE-SAGA-EXERCISE--GET-BOOK-LIST--FINISHED",
   getBookListRejected: "SIMPLE-SAGA-EXERCISE--GET-BOOK-LIST-REJECTED--FINISHED",
   getBookListFulfilled:
@@ -46,6 +47,17 @@ export const counterSagaFinishedActions = {
   increment: "COUNTER-SAGA--INCREMENT-FINISHED",
   incrementAsync: "COUNTER-SAGA--INCREMENT-ASYNC-FINISHED",
   reset: "COUNTER-SAGA--RESET-FINISHED",
+};
+
+export const debounceFinished = {
+  changeSize: "DEBOUNCE--CHANGE-SIZE",
+  saveSize: "DEBOUNCE--SAVE-SIZE",
+  postSize: "DEBOUNCE--POST-SIZE",
+  postSizeFulfilled: "DEBOUNCE--POST-SIZE-FULFILLED",
+  postSizeRejected: "DEBOUNCE--POST-SIZE-REJECTED",
+  getSize: "DEBOUNCE--GET-SIZE",
+  getSizeFulfilled: "DEBOUNCE--GET-SIZE-FULFILLED",
+  getSizeRejected: "DEBOUNCE--GET-SIZE-REJECTED",
 };
 
 export const debounceFinishedActions = {

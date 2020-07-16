@@ -1,5 +1,9 @@
 import { simpleSagaExerciseFinishedActions } from "../../../actionTypes";
 
+export const startGetBookList = () => ({
+  type: simpleSagaExerciseFinishedActions.startGetBookList,
+});
+
 export const getBookList = () => ({
   type: simpleSagaExerciseFinishedActions.getBookList,
 });

@@ -7,9 +7,10 @@ import {
   getSize,
   paneResize,
 } from "../../../actions/exercise/3/exercise3Finished";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const Exercise3Finished = () => {
-  const { size } = useSelector((state) => state.exercise3Finished);
+  const { size, isLoading } = useSelector((state) => state.exercise3Finished);
 
   const dispatch = useDispatch();
 
@@ -18,7 +19,6 @@ const Exercise3Finished = () => {
 
   useEffect(() => {
     getSizeAction();
-    // console.log("here");
   }, []);
 
   const changeSize = (size) => {
@@ -27,14 +27,16 @@ const Exercise3Finished = () => {
 
   return (
     <PaperSocket fullSize>
-      <Resizer>
-        <SplitPane split="horizontal" onChange={changeSize} size={size}>
-          <Pane className={"Pane"}>You can use a Pane component</Pane>
-          <Pane className={"Pane"}>
-            Using a Pane allows you to specify any constraints directly
-          </Pane>
-        </SplitPane>
-      </Resizer>
+      {isLoading ? (
+        <CircularProgress />
+      ) : (
+        <Resizer>
+          <SplitPane split="horizontal" onChange={changeSize} size={size}>
+            <Pane className={"Pane"}>I need some space</Pane>
+            <Pane className={"Pane"}>I also need some space</Pane>
+          </SplitPane>
+        </Resizer>
+      )}
     </PaperSocket>
   );
 };

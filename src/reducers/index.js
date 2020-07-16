@@ -7,6 +7,7 @@ import exercise2Reducer from "./exercise/2/exercise2";
 import exercise1FinishedReducer from "./exercise/1/exercise1Finished";
 import exercise1Reducer from "./exercise/1/exercise1";
 import exercise3FinishedReducer from "./exercise/3/exercise3Finished";
+import exercise3Reducer from "./exercise/3/exercise3";
 
 const rootReducer = combineReducers({
   case1: case1Reducer,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   exercise1Finished: exercise1FinishedReducer,
   exercise2: exercise2Reducer,
   exercise2Finished: exercise2FinishedReducer,
+  exercise3: exercise3Reducer,
   exercise3Finished: exercise3FinishedReducer,
 });
 

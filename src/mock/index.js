@@ -1,4 +1,9 @@
-import { getSizeFinished, saveSizeFinished } from "../utils/localStorrage";
+import {
+  getSizeFinished,
+  saveSize,
+  saveSizeFinished,
+  getSize,
+} from "../utils/localStorrage";
 
 export const getBooksApi = (getError, loadTime) => {
   const timeout = loadTime ? loadTime : 1300;
@@ -6,6 +11,34 @@ export const getBooksApi = (getError, loadTime) => {
     setTimeout(() => {
       if (getError) return reject("Dummy error message");
       else return resolve(data);
+    }, timeout);
+  });
+};
+
+export const saveSizeApi = (size, getError, loadTime) => {
+  const timeout = loadTime ? loadTime : 1300;
+
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (getError) return reject("dummy error message");
+      else {
+        saveSize(size);
+        return resolve("updated size");
+      }
+    }, timeout);
+  });
+};
+
+export const getSizeApi = (getError, loadTime) => {
+  const timeout = loadTime ? loadTime : 1300;
+
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (getError) return reject("dummy error message");
+      else {
+        const size = getSize();
+        return resolve(size);
+      }
     }, timeout);
   });
 };
