@@ -5,7 +5,7 @@ import Exercise2Content from "../../components/exercise2Content";
 import Footer from "../../components/footer";
 import pageRoute from "../pageRoute";
 import Info from "../../components/info";
-import infoImg from "../../components/img/1/info1.png";
+import infoImg from "../../components/img/2/info2.png";
 
 const Exercise2Page = () => {
   const content = <img src={infoImg} alt={"saga info"} />;

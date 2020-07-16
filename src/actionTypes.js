@@ -47,3 +47,14 @@ export const counterSagaFinishedActions = {
   incrementAsync: "COUNTER-SAGA--INCREMENT-ASYNC-FINISHED",
   reset: "COUNTER-SAGA--RESET-FINISHED",
 };
+
+export const debounceFinishedActions = {
+  changeSize: "DEBOUNCE--CHANGE-SIZE-FINISHED",
+  saveSize: "DEBOUNCE--SAVE-SIZE-FINISHED",
+  postSize: "DEBOUNCE--POST-SIZE-FINISHED",
+  postSizeFulfilled: "DEBOUNCE--POST-SIZE-FULFILLED-FINISHED",
+  postSizeRejected: "DEBOUNCE--POST-SIZE-REJECTED-FINISHED",
+  getSize: "DEBOUNCE--GET-SIZE-FINISHED",
+  getSizeFulfilled: "DEBOUNCE--GET-SIZE-FULFILLED-FINISHED",
+  getSizeRejected: "DEBOUNCE--GET-SIZE-REJECTED-FINISHED",
+};

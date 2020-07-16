@@ -13,7 +13,7 @@ const Exercise1Page = () => {
   return (
     <>
       <Header title="Exercise 1: Asynchronous counter" />
-      <Info title={"Task cancellation"} content={content} />
+      <Info title={"Task delay"} content={content} />
       <Content>
         <Exercise1Content />
       </Content>
