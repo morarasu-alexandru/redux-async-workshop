@@ -1,5 +1,5 @@
 import { call, debounce, put, takeLatest } from "redux-saga/effects";
-import { debounceFinishedActions } from "../../../actionTypes";
+import { debounceActions } from "../../../actionTypes";
 import {
   getSizeFulfilled,
   getSizeRejected,
@@ -29,11 +29,13 @@ function* getSizeSaga() {
 
 function* paneResizeSaga(action) {
   const { size } = action.payload;
-  yield put(savePaneSize(size));
-  yield call(postSizeSaga, size);
+  yield console.log("I have been called and received the size: ", size);
+
+  // 'savePaneSize' - to save the pane size in 'front end'
+  // 'postSizeSaga' - to post the pane size to 'server'
 }
 
 export function* watchPaneResize() {
-  yield debounce(500, debounceFinishedActions.changeSize, paneResizeSaga);
-  yield takeLatest(debounceFinishedActions.getSize, getSizeSaga);
+  yield takeLatest(debounceActions.changeSize, paneResizeSaga);
+  yield takeLatest(debounceActions.getSize, getSizeSaga);
 }

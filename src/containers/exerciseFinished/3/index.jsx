@@ -5,7 +5,7 @@ import Resizer from "../../../components/Resizer";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getSize,
-  paneResize,
+  changeSize,
 } from "../../../actions/exercise/3/exercise3Finished";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
@@ -14,15 +14,15 @@ const Exercise3Finished = () => {
 
   const dispatch = useDispatch();
 
-  const paneResizeAction = (size) => dispatch(paneResize(size));
+  const changeSizeAction = (size) => dispatch(changeSize(size));
   const getSizeAction = () => dispatch(getSize());
 
   useEffect(() => {
     getSizeAction();
   }, []);
 
-  const changeSize = (size) => {
-    paneResizeAction(size);
+  const changePaneSize = (size) => {
+    changeSizeAction(size);
   };
 
   return (
@@ -31,7 +31,7 @@ const Exercise3Finished = () => {
         <CircularProgress />
       ) : (
         <Resizer>
-          <SplitPane split="horizontal" onChange={changeSize} size={size}>
+          <SplitPane split="horizontal" onChange={changePaneSize} size={size}>
             <Pane className={"Pane"}>I need some space</Pane>
             <Pane className={"Pane"}>I also need some space</Pane>
           </SplitPane>

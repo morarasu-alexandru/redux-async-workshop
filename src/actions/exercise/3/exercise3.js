@@ -1,38 +1,38 @@
-import { debounceFinished } from "../../../actionTypes";
+import { debounceActions } from "../../../actionTypes";
 
-export const paneResize = (size) => ({
-  type: debounceFinished.changeSize,
+export const changeSize = (size) => ({
+  type: debounceActions.changeSize,
   payload: { size },
 });
 
 export const savePaneSize = (size) => ({
-  type: debounceFinished.saveSize,
+  type: debounceActions.saveSize,
   payload: { size },
 });
 
 export const postSize = () => ({
-  type: debounceFinished.postSize,
+  type: debounceActions.postSize,
 });
 
 export const postSizeFulfilled = () => ({
-  type: debounceFinished.postSizeFulfilled,
+  type: debounceActions.postSizeFulfilled,
 });
 
 export const postSizeRejected = (err) => ({
-  type: debounceFinished.postSizeRejected,
+  type: debounceActions.postSizeRejected,
   payload: { err },
 });
 
 export const getSize = () => ({
-  type: debounceFinished.getSize,
+  type: debounceActions.getSize,
 });
 
 export const getSizeFulfilled = (size) => ({
-  type: debounceFinished.getSizeFulfilled,
+  type: debounceActions.getSizeFulfilled,
   payload: { size },
 });
 
 export const getSizeRejected = (err) => ({
-  type: debounceFinished.getSizeRejected,
+  type: debounceActions.getSizeRejected,
   payload: { err },
 });

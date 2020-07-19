@@ -1,4 +1,4 @@
-import { debounceFinished } from "../../../actionTypes";
+import { debounceActions } from "../../../actionTypes";
 
 const initialState = {
   size: null,
@@ -8,7 +8,7 @@ const initialState = {
 
 const exercise3Reducer = (state = initialState, action) => {
   switch (action.type) {
-    case debounceFinished.saveSize: {
+    case debounceActions.saveSize: {
       const { size } = action.payload;
 
       return {
@@ -17,14 +17,14 @@ const exercise3Reducer = (state = initialState, action) => {
       };
     }
 
-    case debounceFinished.postSizeFulfilled: {
+    case debounceActions.postSizeFulfilled: {
       return {
         ...state,
         isLoading: false,
       };
     }
 
-    case debounceFinished.postSizeRejected: {
+    case debounceActions.postSizeRejected: {
       const { err } = action.payload;
 
       return {
@@ -34,14 +34,14 @@ const exercise3Reducer = (state = initialState, action) => {
       };
     }
 
-    case debounceFinished.getSize: {
+    case debounceActions.getSize: {
       return {
         ...state,
         isLoading: true,
       };
     }
 
-    case debounceFinished.getSizeFulfilled: {
+    case debounceActions.getSizeFulfilled: {
       const { size } = action.payload;
 
       console.log("size: ", size);
@@ -53,7 +53,7 @@ const exercise3Reducer = (state = initialState, action) => {
       };
     }
 
-    case debounceFinished.getSizeRejected: {
+    case debounceActions.getSizeRejected: {
       const { err } = action.payload;
 
       return {

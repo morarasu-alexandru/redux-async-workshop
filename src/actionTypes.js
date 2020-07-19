@@ -49,7 +49,7 @@ export const counterSagaFinishedActions = {
   reset: "COUNTER-SAGA--RESET-FINISHED",
 };
 
-export const debounceFinished = {
+export const debounceActions = {
   changeSize: "DEBOUNCE--CHANGE-SIZE",
   saveSize: "DEBOUNCE--SAVE-SIZE",
   postSize: "DEBOUNCE--POST-SIZE",

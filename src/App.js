@@ -13,6 +13,7 @@ import pageRoute from "./pages/pageRoute";
 import Exercise1Page from "./pages/exercise1";
 import Exercise2Page from "./pages/exercise2";
 import Exercise3Page from "./pages/exercise3";
+import Case4Page from "./pages/case4";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route exact path={pageRoute.exercise1} component={Exercise1Page} />
             <Route exact path={pageRoute.exercise2} component={Exercise2Page} />
             <Route exact path={pageRoute.exercise3} component={Exercise3Page} />
+            <Route exact path={pageRoute.case4} component={Case4Page} />
           </Switch>
         </Router>
       </div>

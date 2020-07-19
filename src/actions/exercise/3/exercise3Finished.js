@@ -1,6 +1,6 @@
 import { debounceFinishedActions } from "../../../actionTypes";
 
-export const paneResize = (size) => ({
+export const changeSize = (size) => ({
   type: debounceFinishedActions.changeSize,
   payload: { size },
 });
