@@ -13,13 +13,13 @@ const Exercise2Content = () => {
           <p>Solving steps:</p>
           {/* eslint-disable-next-line no-octal-escape */}
           <p>
-            1.Add cancel action function to corresponding button
-            (src\containers\exercise\2\index.jsx)
+            1.Add cancel action function to corresponding button (src\
+            <span className="green">containers</span>\exercise\2\index.jsx)
           </p>
           {/* eslint-disable-next-line no-octal-escape */}
           <p>
             2. Modify the saga accordingly in order to listen to cancel actions
-            (src\sagas\exercise\2\exercise2.js)
+            (src\<span className="orange">sagas</span>\exercise\2\exercise2.js)
           </p>
         </PaperSocket>
         <Exercise2 />

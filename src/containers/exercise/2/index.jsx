@@ -5,8 +5,8 @@ import Button from "@material-ui/core/Button";
 
 import {
   cancelGetBookList,
-  getBookList,
   resetBookList,
+  startGetBookList,
 } from "../../../actions/exercise/2/exercise2";
 import PaperSocket from "../../../components/caseTemplate";
 
@@ -17,7 +17,7 @@ const Exercise2 = () => {
 
   const dispatch = useDispatch();
 
-  const getBookListAction = () => dispatch(getBookList());
+  const startGetBookListAction = () => dispatch(startGetBookList());
   const resetBookListAction = () => dispatch(resetBookList());
   const cancelGetBookListAction = () => dispatch(cancelGetBookList());
   // todo: add cancel function to corresponding button
@@ -26,7 +26,7 @@ const Exercise2 = () => {
     <PaperSocket fullSize>
       <div className="BoxButtons">
         <Button
-          onClick={getBookListAction}
+          onClick={startGetBookListAction}
           className="GeneralButton"
           variant={"contained"}
           color={"primary"}

@@ -31,11 +31,12 @@ function* paneResizeSaga(action) {
   const { size } = action.payload;
   yield console.log("I have been called and received the size: ", size);
 
-  // 'savePaneSize' - to save the pane size in 'front end'
-  // 'postSizeSaga' - to post the pane size to 'server'
+  //todo: to save the pane size in 'front end' dispatch savePaneSize (put)
+  //todo: to post the pane size to 'server' call postSizeSaga with the correct arguments
 }
 
 export function* watchPaneResize() {
+  //todo: only the line below should be modified from takeLatest to a better suited effect
   yield takeLatest(debounceActions.changeSize, paneResizeSaga);
   yield takeLatest(debounceActions.getSize, getSizeSaga);
 }

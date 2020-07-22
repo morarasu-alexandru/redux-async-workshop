@@ -13,13 +13,16 @@ const Exercise1Content = () => {
           <p>Solving steps:</p>
           {/* eslint-disable-next-line no-octal-escape */}
           <p>
-            1.Delay the increment action with 1000 ms
-            (src\sagas\exercise\1\exercise1.js)
+            1.Delay the increment action with 1000 ms by modifying{" "}
+            <b>asyncIncrementSaga</b> (src\
+            <span className="orange">sagas</span>\exercise\1\exercise1.js)
           </p>
           {/* eslint-disable-next-line no-octal-escape */}
           <p>
-            2. Modify the watcher function to listen to all async increment
-            actions (src\sagas\exercise\1\exercise1.js)
+            2. Modify the watcher function <b>watchAsyncIncrement</b> to listen
+            to all async increment actions (src\
+            <span className="orange">sagas</span>
+            \exercise\1\exercise1.js)
           </p>
         </PaperSocket>
         <Exercise1 />

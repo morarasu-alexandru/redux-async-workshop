@@ -20,10 +20,11 @@ export const simpleSagaActions = {
 };
 
 export const simpleSagaExerciseActions = {
-  resetBookList: "SIMPLE-SAGA-EXERCISE--RESET-BOOK-LIST",
+  startGetBookList: "SIMPLE-SAGA-EXERCISE--START-GET-BOOK-LIST",
   getBookList: "SIMPLE-SAGA-EXERCISE--GET-BOOK-LIST",
   getBookListRejected: "SIMPLE-SAGA-EXERCISE--GET-BOOK-LIST-REJECTED",
   getBookListFulfilled: "SIMPLE-SAGA-EXERCISE--GET-BOOK-LIST-FULFILLED",
+  resetBookList: "SIMPLE-SAGA-EXERCISE--RESET-BOOK-LIST",
   cancelGetBookList: "SIMPLE-SAGA-EXERCISE--CANCEL-GET-BOOK",
 };
 

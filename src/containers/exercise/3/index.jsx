@@ -20,7 +20,7 @@ const Exercise3 = () => {
 
   const changePaneSize = (size) => {
     console.log("size from pane: ", size);
-    // call changeSizeAction with the received size
+    //todo:  call changeSizeAction with the received size
   };
 
   return (

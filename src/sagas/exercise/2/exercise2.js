@@ -1,12 +1,14 @@
-import { call, put, takeLatest } from "redux-saga/effects";
+import { call, put, takeLatest, fork, cancel, take } from "redux-saga/effects";
 import { getBooksApi } from "../../../mock";
 import {
+  getBookList,
   getBookListFulfilled,
   getBookListRejected,
 } from "../../../actions/exercise/2/exercise2";
 import { simpleSagaExerciseActions } from "../../../actionTypes";
 
 function* fetchBookListSaga() {
+  yield put(getBookList());
   try {
     const bookList = yield call(getBooksApi);
     yield put(getBookListFulfilled(bookList));
@@ -16,5 +18,9 @@ function* fetchBookListSaga() {
 }
 
 export function* watchCancelableGetBookList() {
-  yield takeLatest(simpleSagaExerciseActions.getBookList, fetchBookListSaga);
+  // todo: take use of "simpleSagaExerciseActions.cancelGetBookList" action type
+  yield takeLatest(
+    simpleSagaExerciseActions.startGetBookList,
+    fetchBookListSaga
+  );
 }
