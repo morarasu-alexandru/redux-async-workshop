@@ -169,7 +169,7 @@ const content = (
           <span className="token punctuation">)</span>
         </div>
         <div className="indent3">
-          <span className="token comment" spellcheck="true">
+          <span className="token comment" spellCheck="true">
             // wait for the user stop action
           </span>
         </div>
@@ -180,12 +180,12 @@ const content = (
           <span className="token punctuation">)</span>
         </div>
         <div className="indent3">
-          <span className="token comment" spellcheck="true">
+          <span className="token comment" spellCheck="true">
             // user clicked stop. cancel the background task
           </span>
         </div>
         <div className="indent3">
-          <span className="token comment" spellcheck="true">
+          <span className="token comment" spellCheck="true">
             // this will cause the forked bgSync task to jump into its finally
             block
           </span>

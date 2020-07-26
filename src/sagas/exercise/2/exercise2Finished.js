@@ -1,12 +1,4 @@
-import {
-  call,
-  cancel,
-  cancelled,
-  fork,
-  put,
-  take,
-  takeLatest,
-} from "redux-saga/effects";
+import { call, cancel, cancelled, fork, put, take } from "redux-saga/effects";
 
 import {
   getBookList,
@@ -30,17 +22,10 @@ function* fetchBookListSaga() {
   }
 }
 
-export function* fetchBookListWatcher() {
-  const fetchBookListSagaTask = yield fork(fetchBookListSaga);
-
-  yield take(simpleSagaExerciseFinishedActions.cancelGetBookList);
-
-  yield cancel(fetchBookListSagaTask);
-}
-
 export function* watchCancelableGetBookListFinished() {
-  yield takeLatest(
-    simpleSagaExerciseFinishedActions.startGetBookList,
-    fetchBookListWatcher
-  );
+  while (yield take(simpleSagaExerciseFinishedActions.startGetBookList)) {
+    const bgSyncTask = yield fork(fetchBookListSaga);
+    yield take(simpleSagaExerciseFinishedActions.cancelGetBookList);
+    yield cancel(bgSyncTask);
+  }
 }

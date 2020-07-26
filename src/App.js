@@ -15,6 +15,7 @@ import Exercise1Page from "./pages/exercise1";
 import Exercise2Page from "./pages/exercise2";
 import Exercise3Page from "./pages/exercise3";
 import Case4Page from "./pages/case4";
+import Case5Page from "./pages/case5";
 
 const theme = createMuiTheme({
   palette: {
@@ -54,6 +55,7 @@ function App() {
                 component={Exercise3Page}
               />
               <Route exact path={pageRoute.case4} component={Case4Page} />
+              <Route exact path={pageRoute.case5} component={Case5Page} />
             </Switch>
           </Router>
         </MuiThemeProvider>

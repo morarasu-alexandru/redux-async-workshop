@@ -3,20 +3,25 @@ import { useDispatch, useSelector } from "react-redux";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Button from "@material-ui/core/Button";
 
-import { getBookListThunk, resetBookList } from "../../actions/case2/case2";
+import {
+  getBookList,
+  getBookListCancel,
+  resetBookList,
+} from "../../actions/case5/case5";
 import PaperSocket from "../../components/caseTemplate";
 
-const Case2Content = () => {
-  const { list, errorMessage, isLoading } = useSelector((state) => state.case2);
+const Case5Content = () => {
+  const { list, errorMessage, isLoading } = useSelector((state) => state.case5);
   const dispatch = useDispatch();
-  const getBookListThunkAction = () => dispatch(getBookListThunk());
-  const resetBookListAction = () => dispatch(resetBookList());
+  const getBookListAction = () => dispatch(getBookList());
+  const getBooksListCancelAction = () => dispatch(getBookListCancel());
+  const resetBookListFinishedAction = () => dispatch(resetBookList());
 
   return (
     <PaperSocket>
       <div className="BoxButtons">
         <Button
-          onClick={getBookListThunkAction}
+          onClick={getBookListAction}
           className={"GeneralButton"}
           size={"small"}
           variant={"contained"}
@@ -25,7 +30,16 @@ const Case2Content = () => {
           Make api call
         </Button>
         <Button
-          onClick={resetBookListAction}
+          onClick={getBooksListCancelAction}
+          className={"GeneralButton"}
+          size={"small"}
+          variant={"contained"}
+          color={"primary"}
+        >
+          Cancel
+        </Button>
+        <Button
+          onClick={resetBookListFinishedAction}
           className={"GeneralButton"}
           size={"small"}
           variant={"contained"}
@@ -50,4 +64,4 @@ const Case2Content = () => {
   );
 };
 
-export default Case2Content;
+export default Case5Content;

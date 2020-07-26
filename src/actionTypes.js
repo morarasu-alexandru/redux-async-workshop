@@ -12,6 +12,14 @@ export const thunkReduxActions = {
   getBookListFulfilled: "THUNK-REDUX--GET-BOOK-LIST-FULFILLED",
 };
 
+export const observableReduxActions = {
+  getBookList: "OBSERVABLE-REDUX--GET-BOOK-LIST",
+  getBookListRejected: "OBSERVABLE-REDUX--GET-BOOK-LIST-REJECTED",
+  getBookListFulfilled: "OBSERVABLE-REDUX--GET-BOOK-LIST-FULFILLED",
+  cancelGetBookList: "OBSERVABLE-REDUX-EXERCISE--CANCEL-GET-BOOK",
+  resetBookList: "OBSERVABLE-REDUX--RESET-BOOK-LIST",
+};
+
 export const simpleSagaActions = {
   resetBookList: "SIMPLE-SAGA--RESET-BOOK-LIST",
   getBookList: "SIMPLE-SAGA--GET-BOOK-LIST",
@@ -29,8 +37,8 @@ export const simpleSagaExerciseActions = {
 };
 
 export const simpleSagaExerciseFinishedActions = {
-  resetBookList: "SIMPLE-SAGA-EXERCISE--RESET-BOOK-LIST--FINISHED",
   startGetBookList: "SIMPLE-SAGA-EXERCISE--START-GET-BOOK-LIST--FINISHED",
+  resetBookList: "SIMPLE-SAGA-EXERCISE--RESET-BOOK-LIST--FINISHED",
   getBookList: "SIMPLE-SAGA-EXERCISE--GET-BOOK-LIST--FINISHED",
   getBookListRejected: "SIMPLE-SAGA-EXERCISE--GET-BOOK-LIST-REJECTED--FINISHED",
   getBookListFulfilled:
