@@ -14,10 +14,10 @@ const HomeContent = () => {
         <div className={style2.ContainerText}>
           <p className={style2.Text}>&#8226; Pure Redux</p>
           <p className={style2.Text}>&#8226; Redux Thunk</p>
+          <p className={style2.Text}>&#8226; Redux Observable</p>
           <p className={style2.Text}>
             <b>&#8226; Redux Saga </b>
           </p>
-          <p className={style2.Text}>&#8226; Redux Observable</p>
         </div>
         <Link className={"ResetButton"} to={pageRoute.case1}>
           <Button
