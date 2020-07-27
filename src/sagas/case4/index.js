@@ -1,9 +1,6 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 
-import {
-  getBookListFulfilled,
-  getBookListRejected,
-} from "../../actions/case3/case3";
+import { getBookListFulfilled, getBookListRejected } from "../../actions/case4";
 import { simpleSagaActions } from "../../actionTypes";
 import { getBooksApi } from "../../mock";
 

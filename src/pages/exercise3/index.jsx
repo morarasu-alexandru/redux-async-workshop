@@ -14,7 +14,7 @@ const Exercise3Page = () => {
       <Content>
         <Exercise3Content />
       </Content>
-      <Footer previousLink={pageRoute.exercise2} nextLink={pageRoute.case4} />
+      <Footer previousLink={pageRoute.exercise2} nextLink={pageRoute.case5} />
     </>
   );
 };

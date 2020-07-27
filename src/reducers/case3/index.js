@@ -1,4 +1,4 @@
-import { simpleSagaActions } from "../../actionTypes";
+import { observableReduxActions } from "../../actionTypes";
 
 const initialState = {
   isLoading: false,
@@ -8,13 +8,13 @@ const initialState = {
 
 const case3Reducer = (state = initialState, action) => {
   switch (action.type) {
-    case simpleSagaActions.getBookList:
+    case observableReduxActions.getBookList:
       return {
         ...state,
         isLoading: true,
       };
 
-    case simpleSagaActions.getBookListRejected:
+    case observableReduxActions.getBookListRejected:
       const { err } = action.payload;
 
       return {
@@ -23,7 +23,7 @@ const case3Reducer = (state = initialState, action) => {
         errorMessage: err,
       };
 
-    case simpleSagaActions.getBookListFulfilled:
+    case observableReduxActions.getBookListFulfilled:
       const { newList } = action.payload;
 
       return {
@@ -32,7 +32,13 @@ const case3Reducer = (state = initialState, action) => {
         list: newList,
       };
 
-    case simpleSagaActions.resetBookList:
+    case observableReduxActions.cancelGetBookList:
+      return {
+        ...state,
+        isLoading: false,
+      };
+
+    case observableReduxActions.resetBookList:
       return {
         ...initialState,
       };

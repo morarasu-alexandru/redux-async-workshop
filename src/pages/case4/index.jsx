@@ -8,11 +8,11 @@ import Case4Content from "../../containers/case4Content";
 const Case4Page = () => {
   return (
     <>
-      <Header title="Case 4: Rabbit vs turtle race" />
+      <Header title="Case 4: Server call redux-saga" />
       <Content>
         <Case4Content />
       </Content>
-      <Footer previousLink={pageRoute.exercise3} nextLink={pageRoute.case5} />
+      <Footer previousLink={pageRoute.case3} nextLink={pageRoute.exercise1} />
     </>
   );
 };

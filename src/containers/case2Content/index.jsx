@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Button from "@material-ui/core/Button";
 
-import { getBookListThunk, resetBookList } from "../../actions/case2/case2";
+import { getBookListThunk, resetBookList } from "../../actions/case2";
 import PaperSocket from "../../components/caseTemplate";
 
 const Case2Content = () => {

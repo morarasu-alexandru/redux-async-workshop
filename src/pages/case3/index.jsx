@@ -5,16 +5,16 @@ import Footer from "../../components/footer";
 import Content from "../../components/content";
 import Case3Content from "../../containers/case3Content";
 
-const Case3Page = () => {
+const Case5Page = () => {
   return (
     <>
-      <Header title="Case 3: Server call redux-saga" />
+      <Header title="Case 3: Redux observable api call" />
       <Content>
         <Case3Content />
       </Content>
-      <Footer previousLink={pageRoute.case2} nextLink={pageRoute.exercise1} />
+      <Footer previousLink={pageRoute.case2} nextLink={pageRoute.case4} />
     </>
   );
 };
 
-export default Case3Page;
+export default Case5Page;

@@ -1,5 +1,5 @@
 import { all, fork } from "redux-saga/effects";
-import { watchGetBookList } from "./case3";
+import { watchGetBookList } from "./case4";
 import { watchCancelableGetBookListFinished } from "./exercise/2/exercise2Finished";
 import { watchCancelableGetBookList } from "./exercise/2/exercise2";
 import { watchAsyncIncrementFinished } from "./exercise/1/exercise2Finished";

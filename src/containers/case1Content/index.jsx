@@ -8,7 +8,7 @@ import {
   getBookListRejected,
   getBookListFulfilled,
   resetBookList,
-} from "../../actions/case1/case1";
+} from "../../actions/case1";
 import { getBooksApi } from "../../mock";
 import PaperSocket from "../../components/caseTemplate";
 

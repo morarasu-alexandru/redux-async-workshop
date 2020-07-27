@@ -8,7 +8,7 @@ import Case5Content from "../../containers/case5Content";
 const Case5Page = () => {
   return (
     <>
-      <Header title="Case something" />
+      <Header title="Case 5: Rabbit vs turtle race" />
       <Content>
         <Case5Content />
       </Content>
