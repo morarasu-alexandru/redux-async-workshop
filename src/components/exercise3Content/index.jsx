@@ -3,7 +3,6 @@ import ExerciseTemplate from "../exerciseTemplate";
 import PaperSocket from "../caseTemplate";
 import Exercise3Finished from "../../containers/exerciseFinished/3";
 import Exercise3 from "../../containers/exercise/3";
-import { debounceActions } from "../../actionTypes";
 
 const Exercise3Content = () => {
   return (
@@ -49,7 +48,8 @@ const Exercise3Content = () => {
           {/* eslint-disable-next-line no-octal-escape */}
           <p>
             6. In <b>paneResizeSaga</b>, second we have to call 'postSizeSaga'
-            'savePaneSize' action (src\<span className="orange">sagas</span>
+            function with correct argument (src\
+            <span className="orange">sagas</span>
             \exercise\3\exercise3.js)
           </p>
         </PaperSocket>

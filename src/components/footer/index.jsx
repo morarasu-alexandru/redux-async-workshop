@@ -18,7 +18,9 @@ const Footer = (props) => {
         {previousLink ? (
           <Link className={"ResetButton"} to={previousLink}>
             <Button
-              className={"GeneralButton Button--NoMargin"}
+              className={
+                "GeneralButton Button--NoMargin GeneralButton-Background"
+              }
               variant="contained"
               color="secondary"
             >
@@ -27,7 +29,9 @@ const Footer = (props) => {
           </Link>
         ) : (
           <Button
-            className={"GeneralButton Button--NoMargin"}
+            className={
+              "GeneralButton Button--NoMargin GeneralButton-Background"
+            }
             disabled
             variant="contained"
             color="secondary"
@@ -38,7 +42,9 @@ const Footer = (props) => {
 
         <Link className={"ResetButton"} to={nextLink}>
           <Button
-            className={"GeneralButton Button--NoMargin"}
+            className={
+              "GeneralButton Button--NoMargin GeneralButton-Background"
+            }
             disabled={!nextLink}
             variant="contained"
             color="secondary"

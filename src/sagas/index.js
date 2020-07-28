@@ -6,6 +6,7 @@ import { watchAsyncIncrementFinished } from "./exercise/1/exercise2Finished";
 import { watchAsyncIncrement } from "./exercise/1/exercise1";
 import { watchPaneResizeFinished } from "./exercise/3/exercise3Finished";
 import { watchPaneResize } from "./exercise/3/exercise3";
+import { watchRaceStart } from "./case5";
 
 export default function* rootSaga() {
   yield all([
@@ -16,5 +17,6 @@ export default function* rootSaga() {
     fork(watchAsyncIncrementFinished),
     fork(watchPaneResizeFinished),
     fork(watchPaneResize),
+    fork(watchRaceStart),
   ]);
 }

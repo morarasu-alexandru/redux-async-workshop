@@ -1,0 +1,49 @@
+.main {
+  padding-top: 50px;
+  position: relative;
+}
+
+.rabbitWrapper {
+  position: absolute;
+  z-index: 2;
+}
+
+.turtleWrapper {
+  position: absolute;
+  z-index: 2;
+  top: 140px;
+}
+
+.panel {
+
+}
+
+.rabbit {
+  //display: flex;
+  //width: 100px;
+  //height: 100px;
+}
+
+.turtle {
+  //width: 100px;
+  //height: 100px;
+}
+
+.turtleImg {
+  width: 100px;
+  height: 100px;
+}
+
+.rabbitImg {
+  width: 100px;
+  height: 100px;
+}
+
+.finishImg {
+  width: 170px;
+  position: absolute;
+  transform: rotate(90deg);
+  z-index: 1;
+  top: 20px;
+  left: 490px;
+}

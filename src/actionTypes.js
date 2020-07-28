@@ -79,3 +79,14 @@ export const debounceFinishedActions = {
   getSizeFulfilled: "DEBOUNCE--GET-SIZE-FULFILLED-FINISHED",
   getSizeRejected: "DEBOUNCE--GET-SIZE-REJECTED-FINISHED",
 };
+
+export const raceActions = {
+  startRace: "RACE-ACTIONS--START-RACE",
+  rabbitStart: "RACE-ACTIONS--RABBIT-START",
+  rabbitSleep: "RACE-ACTIONS--RABBIT-SLEEP",
+  rabbitRun: "RACE-ACTIONS--RABBIT-RUN",
+  turtleStart: "RACE-ACTIONS--TURTLE-START",
+  rabbitWin: "RACE-ACTIONS--RABBIT-WIN",
+  turtleWin: "RACE-ACTIONS--TURTLE-WIN",
+  reset: "RACE-ACTIONS--RESET",
+};

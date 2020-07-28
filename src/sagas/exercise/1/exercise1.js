@@ -1,4 +1,4 @@
-import { put, takeLatest, delay } from "redux-saga/effects";
+import { put, takeLatest, delay, takeEvery } from "redux-saga/effects";
 import { incrementCounter } from "../../../actions/exercise/1/exercise1";
 import { counterSagaActions } from "../../../actionTypes";
 
