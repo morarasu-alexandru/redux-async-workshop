@@ -27,6 +27,7 @@ const Exercise3Finished = () => {
 
   return (
     <PaperSocket fullSize>
+      <h3>Finished Exercise</h3>
       {isLoading ? (
         <CircularProgress />
       ) : (

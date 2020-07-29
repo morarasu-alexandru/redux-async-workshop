@@ -62,6 +62,14 @@
     background: #dd7d11;
 }
 
+.GeneralButton--MarginBottom.GeneralButton--MarginBottom {
+    margin-bottom: 1em;
+}
+
+.GeneralButton.GeneralButton:visited {
+    color: #fff;
+}
+
 .GeneralButton.GeneralButton:hover {
     background: #c16d0f;
 }

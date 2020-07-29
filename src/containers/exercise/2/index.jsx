@@ -24,6 +24,7 @@ const Exercise2 = () => {
 
   return (
     <PaperSocket fullSize>
+      <h3>Exercise</h3>
       <div className="BoxButtons">
         <Button
           onClick={startGetBookListAction}

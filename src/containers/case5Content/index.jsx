@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PaperSocket from "../../components/caseTemplate";
-import rabbitRunImg from "../../components/img/4/rabbitRun.png";
-import rabbitSleepImg from "../../components/img/4/rabbitSleep.png";
-import turtleImg from "../../components/img/4/turtle.png";
-import finishImg from "../../components/img/5/finish-png-4.png";
+import rabbitRunImg from "../../components/img/5/rabbitRun.png";
+import rabbitSleepImg from "../../components/img/5/rabbitSleep.png";
+import turtleImg from "../../components/img/5/turtle.png";
+import finishImg from "../../components/img/5/finish.png";
 import { motion } from "framer-motion";
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";

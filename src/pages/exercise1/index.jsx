@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
+
 import Header from "../../components/header";
 import Content from "../../components/content";
 import Footer from "../../components/footer";
@@ -23,9 +25,14 @@ export default Exercise1Page;
 
 const content = (
   <section className="normal markdown-section">
-    <a href="https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html">
+    <Button
+      className={"GeneralButton GeneralButton--MarginBottom"}
+      variant="contained"
+      href="https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html"
+      target={"_blank"}
+    >
       Link
-    </a>
+    </Button>
     <h2>Delay saga effect:</h2>
     <h3 id="delayms-val">
       <code>delay(ms, [val])</code>

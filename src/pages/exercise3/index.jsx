@@ -5,6 +5,7 @@ import Footer from "../../components/footer";
 import pageRoute from "../pageRoute";
 import Exercise3Content from "../../components/exercise3Content";
 import Info from "../../components/info";
+import Button from "@material-ui/core/Button";
 
 const Exercise3Page = () => {
   return (
@@ -23,9 +24,14 @@ export default Exercise3Page;
 
 const content = (
   <section className="normal markdown-section">
-    <a href="https://redux-saga.js.org/docs/api/#debouncems-pattern-saga-args">
+    <Button
+      className={"GeneralButton GeneralButton--MarginBottom"}
+      variant="contained"
+      href="https://redux-saga.js.org/docs/api/#debouncems-pattern-saga-args"
+      target={"_blank"}
+    >
       Link
-    </a>
+    </Button>
     <pre>
       <code className="lang-javascript">
         <div>

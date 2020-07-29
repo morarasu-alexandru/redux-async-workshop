@@ -20,7 +20,7 @@ function* rabbitRaceSaga(sleepTime) {
   yield delay(sleepTime);
   yield put(rabbitRun());
   yield delay(rabbitRunTime * 1000);
-  return "rabbit";
+  return true;
 }
 
 function* turtleRaceSaga() {
@@ -30,7 +30,6 @@ function* turtleRaceSaga() {
 
 function* rabbitTurtleRaceSaga(actionStartRace) {
   const { rabbitSleepTime } = actionStartRace.payload;
-  console.log("rabbitSleepTime: ", rabbitSleepTime);
   const { response, timeout } = yield race({
     response: call(rabbitRaceSaga, rabbitSleepTime),
     timeout: call(turtleRaceSaga),

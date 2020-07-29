@@ -5,6 +5,7 @@ import Exercise2Content from "../../components/exercise2Content";
 import Footer from "../../components/footer";
 import pageRoute from "../pageRoute";
 import Info from "../../components/info";
+import Button from "@material-ui/core/Button";
 
 const Exercise2Page = () => {
   return (
@@ -26,9 +27,14 @@ export default Exercise2Page;
 
 const content = (
   <section className="normal markdown-section">
-    <a href="https://redux-saga.js.org/docs/advanced/TaskCancellation.html">
+    <Button
+      className={"GeneralButton GeneralButton--MarginBottom"}
+      variant="contained"
+      href="https://redux-saga.js.org/docs/advanced/TaskCancellation.html"
+      target={"_blank"}
+    >
       Link
-    </a>
+    </Button>
     <pre>
       <code className="lang-javascript">
         <span className="token keyword">import</span>{" "}

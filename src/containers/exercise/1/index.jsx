@@ -19,6 +19,7 @@ const Exercise1 = () => {
 
   return (
     <PaperSocket fullSize>
+      <h3>Exercise</h3>
       <div className="BoxButtons">
         <Button
           onClick={incrementCounterAction}
