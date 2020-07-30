@@ -74,6 +74,8 @@ const Case5Content = () => {
         return "sleep";
       case rabbitPhase.runPhase:
         return "run";
+      default:
+        return "initial";
     }
   })();
 
